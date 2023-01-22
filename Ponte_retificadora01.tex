@@ -1,0 +1,161 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[top = 2cm, bottom = 2cm, left = 2.5cm, right = 2.5cm]{geometry}
+\linespread{1.5}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage[dvipsnames, svqnames, xllnames]{xcolor}
+\usepackage{amsmath, array, amssymb}
+\usepackage{graphicx}
+\usepackage{afterpage}
+
+\begin{document}
+
+\begin{titlepage}
+
+\addtolength{\topmargin}{1.5cm}
+
+\setlength{\baselineskip}{1.4\baselineskip}
+
+\begin{center}
+{\large{NOME DA UNIVERSIDADE}}
+
+{\large{INSTITUIÇÃO ACADÊMICA OU ESCOLA OU FACULDADE}}
+
+\end{center}
+\vspace{2cm}
+\begin{center}
+{\Large\textbf{Ponte Reticadora}}
+\end{center}
+
+\vspace{1.5cm}
+
+\begin{center}
+{\Large{Edson Rodrigues dos Santos}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+
+\begin{minipage}{10cm}
+
+\hrulefill
+
+"Trabalho extraido do Mundo da Elétrica e implementado com dados de experimento prático.
+
+\hrulefill
+
+{\textbf{Orientador: Edson Rodrigues dos Santos}}
+
+\end{minipage}
+\end{flushright}
+
+\setlength{\baselineskip}{0.7\baselineskip}
+
+
+\vfill
+
+\begin{center}
+São Paulo
+
+Janeiro de 2023
+\end{center}
+
+\end{titlepage}
+
+\noindent
+Ponte retificadora de tensão é usada para tranformar uma tensão alternada (tensão que é gerada nas usinas) em tensão continua (tensão que é utilizada pelos aparelhos eletronicos).
+\noindent
+Palavras Chave: Ponte, retificadora, tensão, alternada, continua.
+\noindent
+Tensão. Também popularmente chamada como voltagem, que vem do inglês “voltage”:
+Etymology:
+" volt + -age,é derivado do nome de Alessandro Volta, inventor da bateria moderna. porém o correto é usar o termo tensão. Quando dizemos que a tomada é de 127V, estamos dizendo que a tensão eletrica na tomada é de 127V.
+\noindent
+Enfim, tensão alternada é a tensão em que os valores se alternam entre positivo e negativo o tempo todo. Num momento (semi-ciclo) ela tem  valores maiores que zero e em outro menores que zero. Enfim a tensão na tomada muda entre negativo e positivo 60 vezes por segundo!(no Brasil).
+\noindent
+O problema, então é que a maioria dos aparelhos eletrônicos precisam de tensão contínua para funcionar e não alternada! A tensão contínua é aquela que se mantém o tempo todo positiva, ou seja, sempre maior que zero, mas isso não significa que ela precisa ser necessariamente constante!
+\noindent
+Retificadora: retificar significa “tornar reto” ou alinhar.  
+\noindent
+A ponte retificadora atua mantendo a tensão alternada “reta”, ou seja, tensão contínua!
+\noindent
+Ponte: Dada a semelhança na estrutura (formato) entre a ponte de Wheatstone, que é feita com resistores acredita-se é foi dado o nome ponte por este motivo, porem a ponte retificadora é feita com diodos.
+
+\begin{center}
+\noindent
+Potência = V * I\\
+Potência = 0.7V * 0.2A\\
+Potência = 0.14W ou 140mW
+\end{center}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.7]{C:/Users/edkra/OneDrive/Imagens/eletronica/pontes_comparativo.png}
+	\label{Comparativo_pontes}
+	\caption{Imagem das pontes de Wheatstone (resistores) e Ponte retificadora (diodos)}	
+\end{figure}
+\newpage
+\noindent
+Diodos: eles são componentes eletrônicos que atuam como valvulas  e dada suas caracteristicas só deixam a corrente elétrica passar num único sentido:
+\vspace{.07cm}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=.7]{C:/Users/edkra/OneDrive/Imagens/eletronica/diodo.png}
+	\label{ConduçãoDiodo}
+	\caption{Imagem de representação do diodo}	
+\end{figure}
+
+Podemos afirmar que o diodo tem diversas aplicações e uma delas é atuar como um retificador, convertendo tensão alternada em contínua. Mas um diodo não é uma válvula de eletricidade perfeita, ele gasta um pouco de energia para trabalhar e quando a corrente flui através do diodo, alguma potência sempre é dissipada em forma de calor. Isto é percebido através de uma queda de tensão de aproximadamente 0.7V.
+
+Portanto ao projetarmos um circuito devemos observar as quedas de tensão em cada diodo em que passara a corrente:
+
+\vspace{.07cm}
+\begin{figure}[h]
+\centering
+	\includegraphics[scale=.7]{C:/Users/edkra/OneDrive/Imagens/eletronica/quedanodiodo.png}
+	\label{QuedanoDiodo}
+	\caption{Imagem do circuito e queda no  diodo}	
+\end{figure}
+\newpage
+Ao sabermos que o diodo dissipa um pouco de calor na forma de energia podemos fazer o calculo da potencia consumida no mesmo atraves do calculo de potencia: 
+
+Potencia(no diodo)= Tensão(que fica no diodo) vezes a Corrente que passa (no diodo)
+\begin{equation}
+		P_d = V_d \times I_d
+\end{equation}
+
+Tomemos como exemplo que uma corrente de 200mA passe por um diodo de silicio e sabemos que a queda de tensão nesse tipo de diodo é de 0.7V , logo a potencia dissipada sera de (0.7V X 0.2A) = 0,14W ou 140mW.
+
+editar:
+
+Um detalhe interessante é que só vai haver corrente elétrica se a tensão no anodo foi maior que no catodo. Nunca se esqueça desse detalhe! Sendo assim, quando ligamos a tensão alternada na ponte retificadora, veja o que acontece! Quando a tensão fica positiva do lado de cima, a corrente elétrica gerada chega no ponto p1 e precisa se decidir entre D1 e D2.
+Lembra do sentido permitido da corrente no diodo? Então neste caso, o caminho permitido é através de D1, seguindo o sentido de corrente no diodo.
+Agora em p2 a corrente não pode fluir por D3, pois o sentido é proibido! Sendo assim a corrente flui pelo resistor até chegar a p3.
+Agora em p3 tanto D2 quanto D4 estão no sentido correto para conduzir corrente. A energia poderia voltar por D2, mas isto não acontece por que do outro lado do D2 também está positivo. Logo a corrente flui através de D4!
+Ao chegar em p4, a corrente poderia voltar por D3, mas isto não acontece por que do outro lado de D3 está positivo também! Assim a corrente flui de volta para a fonte, fechando o ciclo.
+Agora, quando a tensão alterna para o semiciclo negativo, você pode notar que temos um trajeto diferente da corrente! A corrente chega em p4 e precisa se decidir entre D3 e D4.
+Como o sentido via D4 não é permitido, ela vai por D3, lembre-se sempre da seta.
+Ao chegar em p2, não há como fluir por D1 então a corrente passa pelo resistor até p3.
+Chegando em p3, não dá pra voltar via D4 pois D4 também tem positivo do outro lado, sendo assim, a corrente vai por D2 até p1.
+Em p1, como do outro lado de D1 também está positivo, a corrente segue para o negativo da fonte!
+Não sei se vocês perceberam, mas a corrente no resistor foi no mesmo sentido, da esquerda para a direita, tanto no ciclo positivo quanto no negativo, observe na imagem abaixo. Desta forma, a energia que entrou alternada, aparece sempre positiva e no mesmo sentido na saída da ponte retificador
+Mas e pra fazer a tensão ficar realmente contínua na saída? Para isso, é necessário utilizar um capacitor, colocando-o em paralelo com o resistor. Feito isso, ele vai se carregar e se encher de energia toda vez que tensão subir e no momento que a tensão começar a descer é o capacitor que vai enviar a energia dele para alimentar o seu circuito, deixando a tensão na saída contínua ou o mais próximo possível disto!
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

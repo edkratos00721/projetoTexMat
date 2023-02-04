@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[top = 2cm, bottom = 2cm, left = 2.5cm, right = 2.5cm]{geometry}
+\linespread{1.5}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage[dvipsnames, svqnames, xllnames]{xcolor}
+\usepackage{amsmath, array, amssymb}
+\usepackage{graphicx}
+
+\title{\textbf{Exercícios de Fixação - Curso de LaTeX}}
+\author{Autor: Edson Rodrigues dos Santos}
+\date{Data: 13 de Janeiro de 2023}
+
+\begin{document}
+\begin{tabular}{|l|c|r|}
+Célula 1 & Célula 2 & Célula 3\\
+Célula 4 & Célula 5 & Célula 6\\
+Célula 7 & Célula 8 & Célula 9	
+\end{tabular}
+\hspace*{2cm}
+\begin{tabular}{|l|c|r|} \hline
+Célula 1 & Célula 2 & Célula 3\\ \hline
+Célula 4 & Célula 5 & Célula 6\\
+Célula 7 & Célula 8 & Célula 9	
+\end{tabular}\\\\
+
+\begin{tabular}{|l|c|r|} \hline
+Célula 1 & Célula 2 & Célula 3\\ \hline
+Célula 4 & Célula 5 & Célula 6\\ \hline
+Célula 7 & Célula 8 & Célula 9\\ 	
+\end{tabular}\hspace*{2cm}
+\begin{tabular}{|l|c|r|} \hline
+Célula 1 & Célula 2 & Célula 3\\ \hline
+Célula 4 & Célula 5 & Célula 6\\ \hline
+Célula 7 & Célula 8 & Célula 9\\ \hline	
+\end{tabular}\\\\
+
+
+\begin{tabular}{|c|c|c|c|} \hline
+\multicolumn{4}{|c|}{Meses do Ano}\\ \hline
+Janeiro & Fevereiro & Março & Abril\\ \hline
+Maio & Junho & Julho & Agosto\\ \hline
+Setembro & Outrubro & Novembro & Dezembro\\\hline	
+
+\end{tabular}\\\\
+
+
+\begin{tabular}{|c|ll|} \hline
+numeros & \multicolumn{2}{|c|}{Meses do Ano e abreviação}\\\hline
+1 & Janeiro & Fevereiro\\ \cline{2-3}
+2 & Março & Abril\\ \cline{2-3}
+3 & Maio & Junho\\ \cline{2-3} 
+4 & Julho & Agosto\\ \cline{2-3}
+5 & Setembro & Outubro \\ \cline{2-3} 
+6 & Novembro & Dezembro\\\hline	
+\end{tabular}
+
+\begin{table}[h]
+\centering
+\caption{Os maiores paises do mundo em extensão } \vspace*{0.5cm}
+\begin{tabular}{c |cc}
+Posição & Paises & Extensão territorial ($ km^{2} $)\\
+\hline
+1 & Russia & 17.098.246\\
+2 & Canada & 9.984.670\\
+3 & China & 9.596.961\\
+4 & Estados Unidos & 9.371.174\\
+5 & Brasil & 8.515.767
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.6]{C:/Users/edkra/OneDrive/Imagens/Screenshots/2020-08-25.png}
+	\label{ImagemTeste}
+	\caption{Imagem de Teste}
+\end{figure}
+
+\begin{center}
+ 
+	\textit{Verificou então em seu celular que 1 milha corresponde a 1.609,34 metros
+Qual a distância em metros até o Hotel?
+4) Uma pessoa que viaja pelos Estados Unidos suspeita que está com febre. Decide então 
+comprar um termômetro e verificar. Ao fazer a medida e analisar o resultado, ela 
+percebe que sua temperatura é de 96,8°F.
+Qual seria a temperatura dessa pessoa na unidade do S.I?
+Dica: a fórmula para converter a temperatura é 𝑇𝑐
+5 =(𝑇𝐹−32)}
+
+\end{center}
+
+\end{document}
